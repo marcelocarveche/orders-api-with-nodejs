@@ -1,9 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import path from 'node:path'
-
-
-import { router } from './router'
+import { router } from './app/routes/router'
 
 mongoose.connect('mongodb://localhost:27017')
   .then(() => {
@@ -23,4 +21,3 @@ mongoose.connect('mongodb://localhost:27017')
     })
   })
   .catch(() => console.log('⚠️ erro ao conectar no mongodb'))
-
